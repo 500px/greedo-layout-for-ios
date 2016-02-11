@@ -17,8 +17,6 @@
 		B063FC3A1C6BECD9004924A3 /* GreedoLayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC391C6BECD9004924A3 /* GreedoLayoutExampleTests.m */; };
 		B063FC481C6CD634004924A3 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC471C6CD634004924A3 /* ImageCollectionViewCell.m */; };
 		B063FC4B1C6CD74C004924A3 /* ImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC4A1C6CD74C004924A3 /* ImageCollectionViewController.m */; };
-		B0DC142A1C6CED020095F6F9 /* UIImage+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DC14291C6CED020095F6F9 /* UIImage+Random.m */; };
-		B0DC142D1C6CEE530095F6F9 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DC142C1C6CEE530095F6F9 /* UIColor+Random.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +50,6 @@
 		B063FC471C6CD634004924A3 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCollectionViewCell.m; path = Views/ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		B063FC491C6CD74C004924A3 /* ImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCollectionViewController.h; path = Controllers/ImageCollectionViewController.h; sourceTree = "<group>"; };
 		B063FC4A1C6CD74C004924A3 /* ImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCollectionViewController.m; path = Controllers/ImageCollectionViewController.m; sourceTree = "<group>"; };
-		B0DC14281C6CED020095F6F9 /* UIImage+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Random.h"; path = "Utilities/UIImage+Random.h"; sourceTree = "<group>"; };
-		B0DC14291C6CED020095F6F9 /* UIImage+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Random.m"; path = "Utilities/UIImage+Random.m"; sourceTree = "<group>"; };
-		B0DC142B1C6CEE530095F6F9 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Random.h"; path = "Utilities/UIColor+Random.h"; sourceTree = "<group>"; };
-		B0DC142C1C6CEE530095F6F9 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Random.m"; path = "Utilities/UIColor+Random.m"; sourceTree = "<group>"; };
 		B52F4DACA0BF737B474659E5 /* Pods-GreedoLayoutExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreedoLayoutExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GreedoLayoutExample/Pods-GreedoLayoutExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +118,6 @@
 			children = (
 				B063FC441C6CD5FA004924A3 /* Controllers */,
 				B063FC451C6CD605004924A3 /* Views */,
-				B0DC14211C6CEA0B0095F6F9 /* Categories */,
 				B063FC221C6BECD9004924A3 /* AppDelegate.h */,
 				B063FC231C6BECD9004924A3 /* AppDelegate.m */,
 				B063FC281C6BECD9004924A3 /* Main.storyboard */,
@@ -169,17 +162,6 @@
 				B063FC471C6CD634004924A3 /* ImageCollectionViewCell.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		B0DC14211C6CEA0B0095F6F9 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				B0DC14281C6CED020095F6F9 /* UIImage+Random.h */,
-				B0DC14291C6CED020095F6F9 /* UIImage+Random.m */,
-				B0DC142B1C6CEE530095F6F9 /* UIColor+Random.h */,
-				B0DC142C1C6CEE530095F6F9 /* UIColor+Random.m */,
-			);
-			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,10 +363,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0DC142D1C6CEE530095F6F9 /* UIColor+Random.m in Sources */,
 				B063FC4B1C6CD74C004924A3 /* ImageCollectionViewController.m in Sources */,
 				B063FC241C6BECD9004924A3 /* AppDelegate.m in Sources */,
-				B0DC142A1C6CED020095F6F9 /* UIImage+Random.m in Sources */,
 				B063FC481C6CD634004924A3 /* ImageCollectionViewCell.m in Sources */,
 				B063FC211C6BECD9004924A3 /* main.m in Sources */,
 			);
