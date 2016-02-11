@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PhotoCollectionViewController.h
 //  GreedoLayoutExample
 //
 //  Created by Denny Hoang on 2016-02-10.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PhotoCollectionViewController : UIViewController
 
 @end
 

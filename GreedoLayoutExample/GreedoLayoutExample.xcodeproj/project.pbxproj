@@ -11,11 +11,14 @@
 		AB7E9F340C0C172531863B2B /* libPods-GreedoLayoutExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D85517E02FA6FCE8F56C9B /* libPods-GreedoLayoutExample.a */; };
 		B063FC211C6BECD9004924A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC201C6BECD9004924A3 /* main.m */; };
 		B063FC241C6BECD9004924A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC231C6BECD9004924A3 /* AppDelegate.m */; };
-		B063FC271C6BECD9004924A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC261C6BECD9004924A3 /* ViewController.m */; };
 		B063FC2A1C6BECD9004924A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B063FC281C6BECD9004924A3 /* Main.storyboard */; };
 		B063FC2C1C6BECD9004924A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B063FC2B1C6BECD9004924A3 /* Assets.xcassets */; };
 		B063FC2F1C6BECD9004924A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B063FC2D1C6BECD9004924A3 /* LaunchScreen.storyboard */; };
 		B063FC3A1C6BECD9004924A3 /* GreedoLayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC391C6BECD9004924A3 /* GreedoLayoutExampleTests.m */; };
+		B063FC481C6CD634004924A3 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC471C6CD634004924A3 /* ImageCollectionViewCell.m */; };
+		B063FC4B1C6CD74C004924A3 /* ImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC4A1C6CD74C004924A3 /* ImageCollectionViewController.m */; };
+		B0DC142A1C6CED020095F6F9 /* UIImage+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DC14291C6CED020095F6F9 /* UIImage+Random.m */; };
+		B0DC142D1C6CEE530095F6F9 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DC142C1C6CEE530095F6F9 /* UIColor+Random.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +41,6 @@
 		B063FC201C6BECD9004924A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B063FC221C6BECD9004924A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B063FC231C6BECD9004924A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B063FC251C6BECD9004924A3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B063FC261C6BECD9004924A3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B063FC291C6BECD9004924A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B063FC2B1C6BECD9004924A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B063FC2E1C6BECD9004924A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,14 @@
 		B063FC351C6BECD9004924A3 /* GreedoLayoutExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreedoLayoutExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B063FC391C6BECD9004924A3 /* GreedoLayoutExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreedoLayoutExampleTests.m; sourceTree = "<group>"; };
 		B063FC3B1C6BECD9004924A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B063FC461C6CD634004924A3 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCollectionViewCell.h; path = Views/ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		B063FC471C6CD634004924A3 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCollectionViewCell.m; path = Views/ImageCollectionViewCell.m; sourceTree = "<group>"; };
+		B063FC491C6CD74C004924A3 /* ImageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCollectionViewController.h; path = Controllers/ImageCollectionViewController.h; sourceTree = "<group>"; };
+		B063FC4A1C6CD74C004924A3 /* ImageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCollectionViewController.m; path = Controllers/ImageCollectionViewController.m; sourceTree = "<group>"; };
+		B0DC14281C6CED020095F6F9 /* UIImage+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Random.h"; path = "Utilities/UIImage+Random.h"; sourceTree = "<group>"; };
+		B0DC14291C6CED020095F6F9 /* UIImage+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Random.m"; path = "Utilities/UIImage+Random.m"; sourceTree = "<group>"; };
+		B0DC142B1C6CEE530095F6F9 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Random.h"; path = "Utilities/UIColor+Random.h"; sourceTree = "<group>"; };
+		B0DC142C1C6CEE530095F6F9 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Random.m"; path = "Utilities/UIColor+Random.m"; sourceTree = "<group>"; };
 		B52F4DACA0BF737B474659E5 /* Pods-GreedoLayoutExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreedoLayoutExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GreedoLayoutExample/Pods-GreedoLayoutExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,10 +122,11 @@
 		B063FC1E1C6BECD9004924A3 /* GreedoLayoutExample */ = {
 			isa = PBXGroup;
 			children = (
+				B063FC441C6CD5FA004924A3 /* Controllers */,
+				B063FC451C6CD605004924A3 /* Views */,
+				B0DC14211C6CEA0B0095F6F9 /* Categories */,
 				B063FC221C6BECD9004924A3 /* AppDelegate.h */,
 				B063FC231C6BECD9004924A3 /* AppDelegate.m */,
-				B063FC251C6BECD9004924A3 /* ViewController.h */,
-				B063FC261C6BECD9004924A3 /* ViewController.m */,
 				B063FC281C6BECD9004924A3 /* Main.storyboard */,
 				B063FC2B1C6BECD9004924A3 /* Assets.xcassets */,
 				B063FC2D1C6BECD9004924A3 /* LaunchScreen.storyboard */,
@@ -141,6 +151,35 @@
 				B063FC3B1C6BECD9004924A3 /* Info.plist */,
 			);
 			path = GreedoLayoutExampleTests;
+			sourceTree = "<group>";
+		};
+		B063FC441C6CD5FA004924A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B063FC491C6CD74C004924A3 /* ImageCollectionViewController.h */,
+				B063FC4A1C6CD74C004924A3 /* ImageCollectionViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B063FC451C6CD605004924A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B063FC461C6CD634004924A3 /* ImageCollectionViewCell.h */,
+				B063FC471C6CD634004924A3 /* ImageCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B0DC14211C6CEA0B0095F6F9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B0DC14281C6CED020095F6F9 /* UIImage+Random.h */,
+				B0DC14291C6CED020095F6F9 /* UIImage+Random.m */,
+				B0DC142B1C6CEE530095F6F9 /* UIColor+Random.h */,
+				B0DC142C1C6CEE530095F6F9 /* UIColor+Random.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,8 +381,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B063FC271C6BECD9004924A3 /* ViewController.m in Sources */,
+				B0DC142D1C6CEE530095F6F9 /* UIColor+Random.m in Sources */,
+				B063FC4B1C6CD74C004924A3 /* ImageCollectionViewController.m in Sources */,
 				B063FC241C6BECD9004924A3 /* AppDelegate.m in Sources */,
+				B0DC142A1C6CED020095F6F9 /* UIImage+Random.m in Sources */,
+				B063FC481C6CD634004924A3 /* ImageCollectionViewCell.m in Sources */,
 				B063FC211C6BECD9004924A3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
