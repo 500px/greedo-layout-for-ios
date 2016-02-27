@@ -1,4 +1,4 @@
-The photos in the sample application are licensed under the Creative Commons and are listed below.
+The photos used in the screenshot of the sample application are licensed under the Creative Commons and are listed below.
 
 * [Head V Heart by Minh Bui](https://500px.com/photo/140742805/head-v-heart-by-minh-bui)
 * [Portfolio Work For Patrik by David Tannfors](https://500px.com/photo/139686767/portfolio-work-for-patrik-by-david-tannfors)
