@@ -21,8 +21,8 @@
 {
     self = [super init];
     if (self) {
-        self.collectionView = collectionView;
-        self.rowMaximumHeight = 100;
+        _collectionView = collectionView;
+        _rowMaximumHeight = 100;
     }
     return self;
 }
