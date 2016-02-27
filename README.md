@@ -1,6 +1,8 @@
 # Greedo Layout for iOS
 A library that computes what size the UICollectionView cells should be to display images in a variable height fixed aspect ratio grid.
 
+![image](screenshot.png)
+
 ## Getting Started
 
 ### Installation with CocoaPods
