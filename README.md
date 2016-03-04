@@ -1,3 +1,7 @@
+[![Version](https://img.shields.io/cocoapods/v/GreedoLayout.svg?style=flat)](http://cocoapods.org/pods/GreedoLayout)
+[![License](https://img.shields.io/cocoapods/l/GreedoLayout.svg?style=flat)](http://cocoapods.org/pods/GreedoLayout)
+[![Platform](https://img.shields.io/cocoapods/p/GreedoLayout.svg?style=flat)](http://cocoapods.org/pods/GreedoLayout)
+
 # Greedo Layout for iOS
 A library that computes what size the UICollectionView cells should be to display images in a variable height fixed aspect ratio grid.
 
