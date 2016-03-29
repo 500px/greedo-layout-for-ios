@@ -23,6 +23,7 @@
     if (self) {
         _collectionView = collectionView;
         _rowMaximumHeight = 100;
+        _fixedHeight = YES;
     }
     return self;
 }
@@ -81,22 +82,22 @@
         photoSize.height = self.rowMaximumHeight;
     }
     
-    CGFloat totalWidth = 0.0;
+    BOOL enoughContentForTheRow = NO;
+    CGFloat rowHeight = self.rowMaximumHeight;
+    
+    CGFloat totalAspectRatio = 0.0;
     
     for (NSValue *leftOver in self.leftOvers) {
         CGSize leftOverSize = [leftOver CGSizeValue];
-        totalWidth += (leftOverSize.width / leftOverSize.height);
+        totalAspectRatio += (leftOverSize.width / leftOverSize.height);
     }
     
     contentWidth -= (self.leftOvers.count - 1) * self.cellPadding;
 
-    CGFloat heightThatFits = contentWidth / totalWidth;
+    rowHeight = contentWidth / totalAspectRatio;
+    enoughContentForTheRow = rowHeight < self.rowMaximumHeight;
     
-    if (heightThatFits > self.rowMaximumHeight) {
-        // The line is not full, let's ask the next photo and try to fill up the line
-        [self computeSizesAtIndexPath:[NSIndexPath indexPathForItem:(indexPath.item + 1) inSection:indexPath.section]];
-        
-    } else {
+    if (enoughContentForTheRow) {
         // The line is full!
         CGFloat availableSpace = contentWidth;
         
@@ -104,11 +105,11 @@
         
             CGSize leftOverSize = [leftOver CGSizeValue];
 
-            CGFloat newWidth = ceil((heightThatFits * leftOverSize.width) / leftOverSize.height);
+            CGFloat newWidth = ceil((rowHeight * leftOverSize.width) / leftOverSize.height);
             newWidth = MIN(availableSpace, newWidth);
             
             // Add the size in the cache
-            [self.sizeCache setObject:[NSValue valueWithCGSize:CGSizeMake(newWidth, heightThatFits)] forKey:self.lastIndexPathAdded];
+            [self.sizeCache setObject:[NSValue valueWithCGSize:CGSizeMake(newWidth, rowHeight)] forKey:self.lastIndexPathAdded];
             
             availableSpace = availableSpace - newWidth - interitemSpacing;
             
@@ -117,6 +118,9 @@
         }
         
         [self.leftOvers removeAllObjects];
+    } else {
+        // The line is not full, let's ask the next photo and try to fill up the line
+        [self computeSizesAtIndexPath:[NSIndexPath indexPathForItem:(indexPath.item + 1) inSection:indexPath.section]];
     }
 }
 
