@@ -23,7 +23,7 @@
     if (self) {
         _collectionView = collectionView;
         _rowMaximumHeight = 100;
-        _fixedHeight = YES;
+        _fixedHeight = NO;
     }
     return self;
 }
@@ -74,47 +74,85 @@
 
     CGSize  photoSize     = [self.dataSource greedoCollectionViewLayout:self originalImageSizeAtIndexPath:indexPath];
     
-    [self.leftOvers addObject:[NSValue valueWithCGSize:photoSize]];
-    
     if (photoSize.width < 1 || photoSize.height < 1) {
         // Photo with no height or width
         photoSize.width  = self.rowMaximumHeight;
         photoSize.height = self.rowMaximumHeight;
     }
+
+    [self.leftOvers addObject:[NSValue valueWithCGSize:photoSize]];
     
     BOOL enoughContentForTheRow = NO;
     CGFloat rowHeight = self.rowMaximumHeight;
+    CGFloat widthMultiplier = 1.0;
     
-    CGFloat totalAspectRatio = 0.0;
-    
-    for (NSValue *leftOver in self.leftOvers) {
-        CGSize leftOverSize = [leftOver CGSizeValue];
-        totalAspectRatio += (leftOverSize.width / leftOverSize.height);
-    }
-    
-    contentWidth -= (self.leftOvers.count - 1) * self.cellPadding;
+    // Calculations for variable height grid
+    if (self.fixedHeight) {
+        CGFloat totalWidth = 0;
+        NSInteger index = 0;
+        for (NSValue *leftOver in self.leftOvers) {
+            CGSize leftOverSize = [leftOver CGSizeValue];
+            CGFloat scaledWidth = ceil((rowHeight * leftOverSize.width) / leftOverSize.height);
+            scaledWidth += interitemSpacing;
+            
+            if ((totalWidth + (scaledWidth * 0.66)) > contentWidth) {
+                // Adding this photo would mean less than 50% of it would be visible
+                enoughContentForTheRow = YES;
+                [self.leftOvers removeObjectAtIndex:index];
+                break;
+            }
+            
+            totalWidth += (scaledWidth);
+            enoughContentForTheRow = (totalWidth > contentWidth);
+            index++;
+        }
+        
+        if (enoughContentForTheRow) {
+            widthMultiplier = totalWidth / contentWidth;
+        }
+        
+    } else {
+        CGFloat totalAspectRatio = 0.0;
+        
+        for (NSValue *leftOver in self.leftOvers) {
+            CGSize leftOverSize = [leftOver CGSizeValue];
+            totalAspectRatio += (leftOverSize.width / leftOverSize.height);
+        }
 
-    rowHeight = contentWidth / totalAspectRatio;
-    enoughContentForTheRow = rowHeight < self.rowMaximumHeight;
+        rowHeight = contentWidth / totalAspectRatio;
+        enoughContentForTheRow = rowHeight < self.rowMaximumHeight;
+    }
     
     if (enoughContentForTheRow) {
         // The line is full!
-        CGFloat availableSpace = contentWidth;
         
+        CGFloat availableSpace = contentWidth;
+        NSInteger index = 0;
         for (NSValue *leftOver in self.leftOvers) {
         
             CGSize leftOverSize = [leftOver CGSizeValue];
 
-            CGFloat newWidth = ceil((rowHeight * leftOverSize.width) / leftOverSize.height);
-            newWidth = MIN(availableSpace, newWidth);
+            CGFloat newWidth = floor((rowHeight * leftOverSize.width) / leftOverSize.height);
+            
+            if (self.fixedHeight) {
+                if (index == self.leftOvers.count - 1) {
+                    newWidth = availableSpace;
+                } else {
+                    newWidth = floor(newWidth * widthMultiplier);
+                }
+            } else {
+                newWidth = MIN(availableSpace, newWidth);
+            }
             
             // Add the size in the cache
             [self.sizeCache setObject:[NSValue valueWithCGSize:CGSizeMake(newWidth, rowHeight)] forKey:self.lastIndexPathAdded];
             
-            availableSpace = availableSpace - newWidth - interitemSpacing;
+            availableSpace -= newWidth;
+            availableSpace -= interitemSpacing;
             
             // We need to keep track of the last index path added
             self.lastIndexPathAdded = [NSIndexPath indexPathForItem:(self.lastIndexPathAdded.item + 1) inSection:self.lastIndexPathAdded.section];
+            index++;
         }
         
         [self.leftOvers removeAllObjects];
