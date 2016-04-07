@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GreedoCollectionViewLayout.h"
 
 @interface ImageCollectionViewController : UIViewController
+
+@property (strong, nonatomic) GreedoCollectionViewLayout *collectionViewSizeCalculator;
 
 @end
 

@@ -10,12 +10,10 @@
 
 #import "ImageCollectionViewController.h"
 #import "ImageCollectionViewCell.h"
-#import "GreedoCollectionViewLayout.h"
 
 @interface ImageCollectionViewController () <GreedoCollectionViewLayoutDataSource, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) GreedoCollectionViewLayout *collectionViewSizeCalculator;
 @property (strong, nonatomic) PHFetchResult *assetFetchResults;
 
 @end
