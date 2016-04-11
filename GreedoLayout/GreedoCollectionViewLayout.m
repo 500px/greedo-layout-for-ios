@@ -72,7 +72,7 @@
         interitemSpacing = layout.minimumInteritemSpacing;
     }
 
-    CGSize  photoSize     = [self.dataSource greedoCollectionViewLayout:self originalImageSizeAtIndexPath:indexPath];
+    CGSize photoSize = [self.dataSource greedoCollectionViewLayout:self originalImageSizeAtIndexPath:indexPath];
     
     if (photoSize.width < 1 || photoSize.height < 1) {
         // Photo with no height or width
@@ -96,13 +96,13 @@
             scaledWidth += interitemSpacing;
             
             if ((totalWidth + (scaledWidth * 0.66)) > contentWidth) {
-                // Adding this photo would mean less than 50% of it would be visible
+                // Adding this photo would mean less than 2/3 of it would be visible
                 enoughContentForTheRow = YES;
                 [self.leftOvers removeObjectAtIndex:index];
                 break;
             }
             
-            totalWidth += (scaledWidth);
+            totalWidth += scaledWidth;
             enoughContentForTheRow = (totalWidth > contentWidth);
             index++;
         }
