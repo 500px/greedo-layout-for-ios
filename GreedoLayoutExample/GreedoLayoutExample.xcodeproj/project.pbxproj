@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		603A3C6176698A5EE3C9D1EA /* libPods-GreedoLayoutExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F256541851E1E5A7CA4CB6B /* libPods-GreedoLayoutExampleTests.a */; };
 		AB7E9F340C0C172531863B2B /* libPods-GreedoLayoutExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D85517E02FA6FCE8F56C9B /* libPods-GreedoLayoutExample.a */; };
-		B02A1EA21CB6D6E000048359 /* ImageConstantHeightCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02A1EA11CB6D6E000048359 /* ImageConstantHeightCollectionViewController.m */; };
+		B02A1EA51CBC36F900048359 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02A1EA41CBC36F900048359 /* HomeTableViewController.m */; };
 		B063FC211C6BECD9004924A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC201C6BECD9004924A3 /* main.m */; };
 		B063FC241C6BECD9004924A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B063FC231C6BECD9004924A3 /* AppDelegate.m */; };
 		B063FC2A1C6BECD9004924A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B063FC281C6BECD9004924A3 /* Main.storyboard */; };
@@ -36,8 +36,8 @@
 		68C21EC2C03E508F042D5203 /* Pods-GreedoLayoutExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreedoLayoutExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GreedoLayoutExample/Pods-GreedoLayoutExample.release.xcconfig"; sourceTree = "<group>"; };
 		69D85517E02FA6FCE8F56C9B /* libPods-GreedoLayoutExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GreedoLayoutExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDC07C71139D6B0C2885077 /* Pods-GreedoLayoutExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreedoLayoutExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GreedoLayoutExampleTests/Pods-GreedoLayoutExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		B02A1EA01CB6D6E000048359 /* ImageConstantHeightCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageConstantHeightCollectionViewController.h; path = Controllers/ImageConstantHeightCollectionViewController.h; sourceTree = "<group>"; };
-		B02A1EA11CB6D6E000048359 /* ImageConstantHeightCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageConstantHeightCollectionViewController.m; path = Controllers/ImageConstantHeightCollectionViewController.m; sourceTree = "<group>"; };
+		B02A1EA31CBC36F900048359 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewController.h; path = Controllers/HomeTableViewController.h; sourceTree = "<group>"; };
+		B02A1EA41CBC36F900048359 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewController.m; path = Controllers/HomeTableViewController.m; sourceTree = "<group>"; };
 		B063FC1C1C6BECD9004924A3 /* GreedoLayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreedoLayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B063FC201C6BECD9004924A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B063FC221C6BECD9004924A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,8 +154,8 @@
 			children = (
 				B063FC491C6CD74C004924A3 /* ImageCollectionViewController.h */,
 				B063FC4A1C6CD74C004924A3 /* ImageCollectionViewController.m */,
-				B02A1EA01CB6D6E000048359 /* ImageConstantHeightCollectionViewController.h */,
-				B02A1EA11CB6D6E000048359 /* ImageConstantHeightCollectionViewController.m */,
+				B02A1EA31CBC36F900048359 /* HomeTableViewController.h */,
+				B02A1EA41CBC36F900048359 /* HomeTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -370,8 +370,8 @@
 			files = (
 				B063FC4B1C6CD74C004924A3 /* ImageCollectionViewController.m in Sources */,
 				B063FC241C6BECD9004924A3 /* AppDelegate.m in Sources */,
-				B02A1EA21CB6D6E000048359 /* ImageConstantHeightCollectionViewController.m in Sources */,
 				B063FC481C6CD634004924A3 /* ImageCollectionViewCell.m in Sources */,
+				B02A1EA51CBC36F900048359 /* HomeTableViewController.m in Sources */,
 				B063FC211C6BECD9004924A3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

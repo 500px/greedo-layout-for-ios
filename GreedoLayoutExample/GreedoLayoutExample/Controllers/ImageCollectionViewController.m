@@ -14,6 +14,7 @@
 @interface ImageCollectionViewController () <GreedoCollectionViewLayoutDataSource, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) GreedoCollectionViewLayout *collectionViewSizeCalculator;
 @property (strong, nonatomic) PHFetchResult *assetFetchResults;
 
 @end
@@ -25,6 +26,7 @@
     [super viewDidLoad];
 
     self.collectionViewSizeCalculator.rowMaximumHeight = CGRectGetHeight(self.collectionView.bounds) / 3;
+    self.collectionViewSizeCalculator.fixedHeight = self.hasFixedHeight;
 
     self.automaticallyAdjustsScrollViewInsets = NO;
 

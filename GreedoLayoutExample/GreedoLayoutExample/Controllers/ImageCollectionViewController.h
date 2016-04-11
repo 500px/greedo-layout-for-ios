@@ -11,7 +11,7 @@
 
 @interface ImageCollectionViewController : UIViewController
 
-@property (strong, nonatomic) GreedoCollectionViewLayout *collectionViewSizeCalculator;
+@property (assign, nonatomic) BOOL hasFixedHeight;
 
 @end
 
