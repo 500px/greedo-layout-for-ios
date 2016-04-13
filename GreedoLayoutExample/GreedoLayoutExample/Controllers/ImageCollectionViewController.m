@@ -10,7 +10,6 @@
 
 #import "ImageCollectionViewController.h"
 #import "ImageCollectionViewCell.h"
-#import "GreedoCollectionViewLayout.h"
 
 @interface ImageCollectionViewController () <GreedoCollectionViewLayoutDataSource, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -27,6 +26,7 @@
     [super viewDidLoad];
 
     self.collectionViewSizeCalculator.rowMaximumHeight = CGRectGetHeight(self.collectionView.bounds) / 3;
+    self.collectionViewSizeCalculator.fixedHeight = self.hasFixedHeight;
 
     self.automaticallyAdjustsScrollViewInsets = NO;
 

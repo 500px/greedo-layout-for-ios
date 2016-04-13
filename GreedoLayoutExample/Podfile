@@ -4,9 +4,17 @@
 # use_frameworks!
 
 target 'GreedoLayoutExample' do
-  pod 'GreedoLayout', :git => 'https://github.com/500px/greedo-layout-for-ios.git'
+  # Normal usage
+  # pod 'GreedoLayout'
+
+  # Use the GreedoLayout pod associated to the commit
+  pod 'GreedoLayout', path: '../'
 end
 
 target 'GreedoLayoutExampleTests' do
-  pod 'GreedoLayout', :git => 'https://github.com/500px/greedo-layout-for-ios.git'
+  # Normal usage
+  # pod 'GreedoLayout'
+
+  # Use the GreedoLayout pod associated to the commit
+  pod 'GreedoLayout', path: '../'
 end
