@@ -94,13 +94,14 @@
         
     } else {
         CGFloat totalAspectRatio = 0.0;
+        CGFloat availableWidth = self.contentWidth - (self.leftOvers.count - 1) * self.interItemSpacing;
         
         for (NSValue *leftOver in self.leftOvers) {
             CGSize leftOverSize = [leftOver CGSizeValue];
             totalAspectRatio += (leftOverSize.width / leftOverSize.height);
         }
         
-        rowHeight = self.contentWidth / totalAspectRatio;
+        rowHeight = availableWidth / totalAspectRatio;
         enoughContentForTheRow = rowHeight < self.rowMaximumHeight;
     }
     
